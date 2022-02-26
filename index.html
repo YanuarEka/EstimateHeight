@@ -7,10 +7,104 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet" />
-  
     <title>Estimate height</title>
     
-    <style></style>
+    <style>
+    :root {
+      --one: #bdd7ff;
+      --two: #4c94ff;
+      --three: #103064;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--one);
+      margin: 0;
+      padding: 0;
+    }
+    #card-form {
+      background: rgba(255, 255, 255, 0.1);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(3.5px);
+      -webkit-backdrop-filter: blur(3.5px);
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+    button {
+      background: rgba(255, 255, 255, 0.1);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(3.5px);
+      -webkit-backdrop-filter: blur(3.5px);
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+    #sc {
+      background: rgba(255, 255, 255, 0.1);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(3.5px);
+      -webkit-backdrop-filter: blur(3.5px);
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+    #header {
+      background: rgba(255, 255, 255, 0.1);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(3.5px);
+      -webkit-backdrop-filter: blur(3.5px);
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+    #card-count {
+      background: rgba(255, 255, 255, 0.1);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(3.5px);
+      -webkit-backdrop-filter: blur(3.5px);
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+    svg {
+      height: 100vh;
+      width: 100%;
+      display: block;
+    }
+    rect[y='0'] {
+      fill: var(--two);
+    }
+    rect[y='100'] {
+      fill: var(--one);
+    }
+    path {
+      transition: 0.35s cubic-bezier(0.3, 0.2, 0.1, 1.4);
+      fill: none;
+      stroke: var(--two);
+      stroke-width: 10;
+      stroke-linejoin: round;
+      stroke-linecap: round;
+    }
+    #floor {
+      stroke: url(#one);
+    }
+    rect[y='100'] {
+      fill: url(#one);
+    }
+    #roof {
+      stroke: url(#two);
+    }
+    rect[y='0'] {
+      fill: url(#two);
+    }
+    #one :first-child {
+      stop-color: var(--one);
+    }
+    #one :last-child {
+      stop-color: var(--two);
+    }
+    #two :first-child {
+      stop-color: var(--two);
+    }
+    #two :last-child {
+      stop-color: var(--three);
+    }
+    </style>
   </head>
 
   <body>
