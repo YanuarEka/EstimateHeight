@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Estimate height</title>
+  </head>
+
+  <body>
+    <svg viewBox="0 0 190 200" preserveAspectRatio="xMidYMid slice" ; style="position: fixed; top: 0">
+      <linearGradient id="one" x1="0%" x2="100%" y1="0%" y2="100%" gradientUnits="userSpaceOnUse">
+        <stop offset="0" />
+        <stop offset="1" />
+      </linearGradient>
+      <linearGradient id="two" x1="0%" x2="100%" y1="0%" y2="100%" gradientUnits="userSpaceOnUse">
+        <stop offset="0" />
+        <stop offset="1" />
+      </linearGradient>
+      <g transform="translate(50, -70) rotate(30) scale(1.3)">
+        <rect x="0" y="0" width="200" height="100" />
+        <rect x="0" y="100" width="200" height="100" />
+        <path id="roof" />
+        <path id="floor" />
+      </g>
+    </svg>
+
+    <div class="container w-full max-w-md mx-auto mt-8 px-4">
+      <span class="block text-white mb-6 py-3 text-center" id="header">
+        Estimate height <br />
+        <span class="text-white">Rumus didapat dari <a href="https://vt.tiktok.com/ZGJByMPxH/">@theasianparent.id</a></span>
+      </span>
+
+      <form class="bg-white bg-opacity-10 shadow-md rounded-lg px-8 pt-6 pb-8 mb-4" id="card-form">
+        <label class="block text-white mb-2"> Tinggi Badan Bapak (cm) </label>
+        <div class="flex items-center border-b mb-5">
+          <input class="appearance-none bg-transparent w-full text-white px-2 leading-tight focus:outline-none mb-2" type="text" id="tbayah" />
+        </div>
+        <label class="block text-white mb-2"> Tinggi Badan Ibu (cm) </label>
+        <div class="flex items-center border-b mb-5">
+          <input class="appearance-none bg-transparent w-full text-white px-2 leading-tight focus:outline-none mb-2" type="text" id="tbibu" />
+        </div>
+      </form>
+
+      <button class="text-white bg-white bg-opacity-10 px-4 rounded-lg py-2 shadow-md mb-5 hover:bg-blue-300" type="submit" onclick="return count()">Hitung</button>
+      <div class="text-white py-8 px-4" id="card-count">
+        <label class="block text-white mb-2"> Tinggi Badan Anak Laki - Laki (cm) </label>
+
+        <div class="space-x-20 text-white">
+          <div class="inline-block">
+            <span>min : </span>
+            <span id="min"></span>
+          </div>
+          <div class="inline-block mb-5">
+            <span>max : </span>
+            <span id="max"></span>
+          </div>
+        </div>
+
+        <label class="block text-white mb-2"> Tinggi Badan Anak Perempuan (cm) </label>
+
+        <div class="space-x-20 text-white">
+          <div class="inline-block">
+            <span>min :</span>
+            <span id="min2"></span>
+          </div>
+          <div class="inline-block">
+            <span>max :</span>
+            <span id="max2"></span>
+          </div>
+        </div>
+      </div>
+      <p class="mt-20 text-white bg-white bg-opacity-10 text-center rounded-lg py-2" id="sc"><a href="">Source Code</a></p>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
